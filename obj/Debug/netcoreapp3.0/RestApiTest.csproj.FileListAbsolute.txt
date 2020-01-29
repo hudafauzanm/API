@@ -1,0 +1,14 @@
+D:\Users\bsi50128\RestApiTest\bin\Debug\netcoreapp3.0\RestApiTest.exe
+D:\Users\bsi50128\RestApiTest\bin\Debug\netcoreapp3.0\RestApiTest.deps.json
+D:\Users\bsi50128\RestApiTest\bin\Debug\netcoreapp3.0\RestApiTest.runtimeconfig.json
+D:\Users\bsi50128\RestApiTest\bin\Debug\netcoreapp3.0\RestApiTest.runtimeconfig.dev.json
+D:\Users\bsi50128\RestApiTest\bin\Debug\netcoreapp3.0\RestApiTest.dll
+D:\Users\bsi50128\RestApiTest\bin\Debug\netcoreapp3.0\RestApiTest.pdb
+D:\Users\bsi50128\RestApiTest\bin\Debug\netcoreapp3.0\McMaster.Extensions.CommandLineUtils.dll
+D:\Users\bsi50128\RestApiTest\bin\Debug\netcoreapp3.0\System.ComponentModel.Annotations.dll
+D:\Users\bsi50128\RestApiTest\obj\Debug\netcoreapp3.0\RestApiTest.csprojAssemblyReference.cache
+D:\Users\bsi50128\RestApiTest\obj\Debug\netcoreapp3.0\RestApiTest.AssemblyInfoInputs.cache
+D:\Users\bsi50128\RestApiTest\obj\Debug\netcoreapp3.0\RestApiTest.AssemblyInfo.cs
+D:\Users\bsi50128\RestApiTest\obj\Debug\netcoreapp3.0\RestApiTest.csproj.CopyComplete
+D:\Users\bsi50128\RestApiTest\obj\Debug\netcoreapp3.0\RestApiTest.dll
+D:\Users\bsi50128\RestApiTest\obj\Debug\netcoreapp3.0\RestApiTest.pdb
