@@ -1,14 +1,3 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "activity": "Lari Larian",
-      "status": "done"
-    },
-    {
-      "id": 2,
-      "activity": "Makan Sarapan Pagi",
-      "status": "Done"
-    }
-  ]
+  "posts": []
 }

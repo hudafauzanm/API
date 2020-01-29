@@ -66,10 +66,11 @@ namespace RestApiTest
             root.Command("clear",app => 
             {
                 app.Description = "Get screenshots from a list of file";
-
+                
                 
                 app.OnExecuteAsync(async cancellationToken => 
                 {
+                    Prompt.GetYesNo("Yakin kah?",false);
                     HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get,"http://localhost:3000/posts");
                     HttpResponseMessage response = await client.SendAsync(request);
                     var json = await response.Content.ReadAsStringAsync();
