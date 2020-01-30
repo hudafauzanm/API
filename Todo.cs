@@ -6,7 +6,9 @@ namespace Todos
     {
         public int id{get;set;}
         public string activity {get;set;}
-        public string status{get;set;} = "Progress";
+        public string status{get;set;}
+        public DateTime createdat{get;set;}
+        public DateTime publishedat{get;set;}
 
     }
 }

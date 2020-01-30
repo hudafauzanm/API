@@ -1,3 +1,9 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "id": 2,
+      "activity": "Lari Larian",
+      "status": "Belum Selesai"
+    }
+  ]
 }

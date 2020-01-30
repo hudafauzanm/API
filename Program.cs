@@ -31,7 +31,7 @@ namespace RestApiTest
                 
                 app.OnExecuteAsync(async cancellationToken => 
                 {
-                    HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get,"http://localhost:3000/posts");
+                    HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get,"https://localhost:5001/todos");
                     HttpResponseMessage response = await client.SendAsync(request);
                     var json = await response.Content.ReadAsStringAsync();
                     
@@ -56,10 +56,9 @@ namespace RestApiTest
                     {
                         activity = text.Value,
                     };
-
                     var data = JsonSerializer.Serialize(add);
                     var hasil = new StringContent(data,Encoding.UTF8,"application/json");
-                    var response = await client.PostAsync("http://localhost:3000/posts",hasil);
+                    var response = await client.PostAsync("https://localhost:5001/todos",hasil);
                 });
             });
 
@@ -71,7 +70,7 @@ namespace RestApiTest
                 app.OnExecuteAsync(async cancellationToken => 
                 {
                     Prompt.GetYesNo("Yakin kah?",false);
-                    HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get,"http://localhost:3000/posts");
+                    HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get,"https://localhost:5001/todos");
                     HttpResponseMessage response = await client.SendAsync(request);
                     var json = await response.Content.ReadAsStringAsync();
                     
@@ -79,7 +78,7 @@ namespace RestApiTest
                     var x = from l in list select l.id;
                     foreach(var y in x)
                     {
-                        var responses = await client.DeleteAsync($"http://localhost:3000/posts/{y}");
+                        var responses = await client.DeleteAsync($"https://localhost:5001/todos/{y}");
                     }
                 });
             });
@@ -93,7 +92,7 @@ namespace RestApiTest
                 {
                     var add = "{" + "\"activity\":" + $"\"{text.Values[1]}\"" + "}";
                     var hasil = new StringContent(add,Encoding.UTF8,"application/json");
-                    var responses = await client.PatchAsync($"http://localhost:3000/posts/{text.Values[0]}",hasil);
+                    var responses = await client.PatchAsync($"https://localhost:5001/todos/{text.Values[0]}",hasil);
                 });
             });
 
@@ -103,7 +102,7 @@ namespace RestApiTest
                 var text = app.Argument("Text","Masukkan Text");
                 app.OnExecuteAsync(async cancellationToken => 
                 {   
-                    var responses = await client.DeleteAsync($"http://localhost:3000/posts/{text.Value}");
+                    var responses = await client.DeleteAsync($"https://localhost:5001/todos/{text.Value}");
                 });
             });
 
@@ -113,14 +112,10 @@ namespace RestApiTest
 
                 var text = app.Argument("Text","Masukkan Text");
                 app.OnExecuteAsync(async cancellationToken => 
-                {
-                    HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get,"http://localhost:3000/posts");
-                    HttpResponseMessage response = await client.SendAsync(request);
-                    var json = await response.Content.ReadAsStringAsync();
-                    
+                {   
                     var add = "{" + "\"status\":" + "\"Done\"" + "}";
                     var hasil = new StringContent(add,Encoding.UTF8,"application/json");
-                    var responses = await client.PatchAsync($"http://localhost:3000/posts/{text.Value}",hasil);
+                    var responses = await client.PatchAsync($"https://localhost:5001/todos/done/{text.Value}",hasil);
                 });
             });
 
